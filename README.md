@@ -1,4 +1,4 @@
-# ZUBIRI AI Learning Lab — Aprendizaje visible (v2.2)
+# ZUBIRI AI Learning Lab — Aprendizaje visible
 
 Tres laboratorios educativos en castellano, autónomos y listos para GitHub Pages:
 
@@ -44,7 +44,7 @@ HTML5, CSS3 y JavaScript sin dependencias. Archivos:
 Los archivos están preparados para usarse como material educativo en el marco de ZUBIRI AI Learning Lab.
 
 
-## Novedades de v2.2
+## Funciones adicionales
 
 - Recorrido guiado «Antes → Durante → Después» en las tres experiencias; los algoritmos se ejecutan realmente y pueden manipularse fuera del recorrido.
 - Regresión: conjunto de validación separado y test final reservado hasta que se pulse «Evaluar modelo elegido»; aviso al explorar una medida fuera del rango de entrenamiento. Un test consultado deja de ser test independiente si se utiliza para volver a elegir parámetros.
@@ -53,8 +53,3 @@ Los archivos están preparados para usarse como material educativo en el marco d
 
 No hay motores gráficos ni control de UR3e. Todos los modelos y mediciones son educativos e ilustrativos.
 
-## Correcciones de v2.2
-
-- Textos visibles de la sección supervisada: «ciclo» y «ciclos» en lugar de «época» y «épocas».
-- Se elimina el párrafo de advertencia largo sobre invencibilidad en la interfaz del tres en raya; la precisión metodológica sigue documentada en este README.
-- Se resalta también la diagonal de derecha a izquierda (casillas 3, 5 y 7) en las victorias tanto de X como de O.
