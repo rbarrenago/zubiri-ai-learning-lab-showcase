@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f8fc"><meta name="description" content="Laboratorio interactivo: visualizar cómo aprende la inteligencia artificial y explorar su aplicación a robótica."><title>Inicio · ZUBIRI AI Learning Lab</title><link rel="stylesheet" href="assets/site.css">
+<style>
+/* Ilustración original del robot: a la derecha del titular en ordenador y tableta. */
+.hero-illustrated{
+  display:grid;
+  grid-template-columns:minmax(0,1.65fr) minmax(220px,.85fr);
+  align-items:center;
+  column-gap:clamp(16px,2.1vw,30px);
+}
+.hero-illustrated .hero-copy{min-width:0}
+.hero-illustrated h1{font-size:clamp(1.85rem,3.6vw,3.3rem)}
+.hero-illustrated .hero-art{
+  margin:0;
+  width:100%;
+  max-width:410px;
+  justify-self:end;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:10px;
+  background:#fff;
+  box-shadow:0 14px 38px rgba(25,50,75,.07);
+}
+.hero-illustrated .hero-art img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;border-radius:16px}
+.hero-illustrated .hero-art figcaption{font-size:.73rem;text-align:center;color:var(--muted);margin-top:3px;padding-bottom:5px}
+/* Un ancho de 900 px sigue mostrando texto e imagen en paralelo. */
+@media(max-width:980px){
+  .hero-illustrated{grid-template-columns:minmax(0,1.6fr) minmax(205px,.8fr);column-gap:18px}
+}
+/* Solo en teléfonos y ventanas estrechas se apila la ilustración. */
+@media(max-width:680px){
+  .hero-illustrated{grid-template-columns:1fr;row-gap:20px}
+  .hero-illustrated .hero-art{justify-self:center;max-width:315px}
+  .hero-illustrated h1{font-size:clamp(2rem,5vw,3rem)}
+}
+</style></head>
+<body><header class="topbar"><div class="wrap topinner"><a class="brand" href="index.html"><span class="mark">Z</span><span>ZUBIRI / AI LEARNING LAB</span></a><nav class="nav" aria-label="Navegación principal"><a class=active href="index.html">Inicio</a><a  href="supervisado.html">Supervisado</a><a  href="no_supervisado.html">No supervisado</a><a  href="refuerzo.html">Refuerzo</a></nav></div></header><main class="wrap"><section class="hero hero-illustrated"><div class="hero-copy"><div class="row"><span class="pill good">DEMOSTRACIONES INTERACTIVAS</span><span class="pill">APRENDIZAJE VISIBLE</span></div><div class="eyebrow" style="margin-top:19px">El robot que enseña cómo aprenden las máquinas</div><h1>Ver el aprendizaje.<br><span style="color:var(--teal)">Entender la IA.</span><br>Aplicarla al mundo físico.</h1><p>Tres laboratorios para observar cómo los datos o la experiencia transforman un modelo: predicciones que mejoran, piezas que se agrupan y un agente que aprende a jugar al tres en raya. Cada experiencia propone su posible aplicación con un brazo robótico UR3e.</p><div class="row"><span class="pill">Algoritmos reales en el navegador</span><span class="pill">Sin instalaciones ni servicios externos</span><span class="pill">Aplicación robótica ilustrativa</span></div></div><figure class="hero-art"><img src="assets/brazo-zubiri-ilustracion.webp" alt="Ilustración original de un brazo robótico colaborativo con pinza, dibujado a mano en colores azul y blanco, para ZUBIRI AI Learning Lab" width="1254" height="1254" decoding="async" fetchpriority="high"><figcaption>Ilustración original · ZUBIRI AI Learning Lab</figcaption></figure></section>
+<section class="grid" aria-label="Tres laboratorios"><article class="card"><div class="ico">📏</div><div class="smallcap" style="margin-top:17px">01 · Aprendizaje supervisado</div><h2>Aprender de mediciones conocidas</h2><p>Una regresión lineal recibe medidas verificadas de piezas y aprende a estimar la apertura de una pinza. Explora el dataset, la curva de error y predice el resultado de una pieza nueva.</p><a class="btn primary go" href="supervisado.html">Explorar regresión ↗</a></article><article class="card"><div class="ico purple">🏰</div><div class="smallcap" style="margin-top:17px">02 · Aprendizaje no supervisado</div><h2>Ordenar piezas antes de construir</h2><p>Antes de crear un pequeño castillo, el robot debe organizar 21 piezas por su anchura y altura. K-means descubre tres agrupaciones sin etiquetas de partida.</p><a class="btn primary go" href="no_supervisado.html">Explorar K-means ↗</a></article><article class="card"><div class="ico gold">⭕</div><div class="smallcap" style="margin-top:17px">03 · Aprendizaje por refuerzo</div><h2>Aprender a jugar al tres en raya</h2><p>Un agente Q-learning empieza sin estrategia, practica contra jugadores simulados y mejora. Consulta el dashboard de victorias, empates y derrotas; luego intenta ganarle.</p><a class="btn primary go" href="refuerzo.html">Entrenar y jugar ↗</a></article></section>
+<h2 class="section-title">Un mismo enfoque, tres formas de aprender</h2><section class="toc"><div class="story-flow"><span class="tag">Definir tarea</span>→<span class="tag">Proporcionar datos o experiencias</span>→<span class="tag">Aprender y visualizar</span>→<span class="tag">Evaluar</span>→<span class="tag">Aplicación robótica ilustrativa</span></div><p style="margin-top:14px">En supervisado usamos <strong>datos etiquetados</strong>; en no supervisado agrupamos <strong>datos sin etiquetas</strong>; y en refuerzo el agente recibe <strong>recompensas</strong> de las partidas. Las tres demostraciones son simulaciones didácticas: no envían movimientos al UR3e.</p></section>
+<div class="footer-grid" style="margin-top:20px"><section class="panel"><h2>¿Qué observar?</h2><ol class="steps"><li>En regresión, cómo cambian los <strong>coeficientes</strong> y baja el error.</li><li>En K-means, cómo se asignan las <strong>21 piezas</strong> y se mueven los centroides.</li><li>En tres en raya, cómo disminuyen las <strong>derrotas</strong> y aumentan los empates frente a rivales más exigentes.</li></ol></section><section class="panel"><h2>De la simulación al UR3e</h2><p>Los modelos toman decisiones de alto nivel: estimar una apertura, organizar piezas o elegir una casilla. Una futura aplicación física necesitaría visión artificial, calibración, movimientos verificados y medidas de seguridad evaluadas.</p><div class="notice">Esta web enseña algoritmos de IA; no entrena las articulaciones del robot ni constituye una validación de seguridad.</div></section></div></main><footer class="foot"><div class="wrap">ZUBIRI AI LEARNING LAB · Laboratorios interactivos de inteligencia artificial · Prototipos de simulación, sin conexión al UR3e</div></footer></body></html>
